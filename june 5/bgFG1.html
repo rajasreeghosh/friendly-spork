@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Background and Foreground</title>
+    <style>
+        header {
+            font-size: 44px;
+            text-align: center;
+            font-weight: bold;
+        }
+
+        h3 {
+            text-align: center;
+            font-weight: bolder;
+        }
+
+        div {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header>Change Background and Foreground with Functions</header>
+    <script>
+        function redBG() {
+            document.bgColor = "red";
+        }
+
+        function yellowBG() {
+            document.bgColor = "yellow";
+        }
+
+        function greenBG() {
+            document.bgColor = "green";
+        }
+
+        function redFG() {
+            document.fgColor = "red";
+        }
+
+        function yellowFG() {
+            document.fgColor = "yellow";
+        }
+
+        function greenFG() {
+            document.fgColor = "green";
+        }
+
+    </script>
+    <br>
+    <h3>Change background colour</h3>
+    <div>
+        <input type="button" value="Red" onclick="redBG()">
+        <input type="button" value="Yellow" onclick="yellowBG()">
+        <input type="button" value="Green" onclick="greenBG()">
+    </div>
+    <h3>Change foreground colour</h3>
+    <div>
+        <input type="button" value="Red" onclick="redFG()">
+        <input type="button" value="Yellow" onclick="yellowFG()">
+        <input type="button" value="Green" onclick="greenFG()">
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>More Java Events</title>
+    <style>
+        
+        div{
+            position: relative;
+            border: 5px solid red;
+            /* margin: 300px 200px; */
+            background-color: rgb(200, 241, 192);
+            display: block;
+            margin: 40px 300px;
+            padding: 20px;
+        }
+        #inputbox{
+            width: 400px;
+            height: 50px;
+            position: relative;
+            margin-top: 0px;
+        }
+        div p{
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body onunload="bye()">
+    
+    
+    
+    
+    <div class="container">
+        <h1>Display multiple choices</h1>
+            
+        <p>What's your hobby??</p>
+
+        <form action="" method="post" name="hobby">
+            <input type="text" name="inputbox" id="inputbox"><br>
+            <input type="checkbox" id="Music" value="Music" class="checkbox">Music
+            <input type="checkbox" id="Dance" value="Dance" class="checkbox">Dance
+            <input type="checkbox" id="Drawing" value="Drawing" class="checkbox">Drawing
+            <input type="checkbox" id="Coding" value="Coding" class="checkbox">Coding
+            <input type="checkbox" id="Travelling" value="Travelling" class="checkbox">Travelling
+        </form>
+    </div>
+    <script>
+        
+        // var valuelist= document.getElementById("inputbox"); this var is maybe useful when we're printing value somewhere other than input boxes
+        var listArray =[];
+
+        var checkboxes= document.querySelectorAll(".checkbox");
+        for(var checkbox of checkboxes){
+            checkbox.addEventListener('click', function check()
+        {
+            if(this.checked == true)
+            {
+                listArray.push(this.value); //adds value in array if checked
+            }
+            else{
+                listArray=listArray.filter(e =>e != this.value) //removes value from array if unchecked
+            }
+            document.hobby.inputbox.value=listArray.join(', ') //finnally displays the final values in input box
+            console.log(listArray) //this tool is used to print value in console of google DevTool
+        })
+        }
+        
+        // document.getElementById("bttn").addEventListener("click", abc)
+        // document.getElementsByName("r1").addEventListener("click",bgChange)
+    </script>
+</body>
+</html>

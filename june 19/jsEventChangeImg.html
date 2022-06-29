@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change Image</title>
+    <style>
+        #img{
+            height: 400px;
+            width: 300px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Change Image</h2>
+        <img src="3876441.webp" alt="" srcset="" name="img" id="img">
+        <form action="" method="post" name="f2">
+            <input type="radio" name="r2" onclick="image()">Image 1
+            <input type="radio" name="r2" onclick="image()">Image 2
+            <input type="radio" name="r2" onclick="image()">Image 3
+
+        </form>
+    </div>
+    <script>
+        function image()
+        {
+            var radio
+            if(f2.r2[0].checked)
+            {
+                img.src="10757791.jpeg"
+            }
+            if(f2.r2[1].checked)
+            {
+                img.src="11289040.jpeg"
+            }
+            if(f2.r2[2].checked)
+            {
+                img.src="10970424.jpeg"
+            }
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payslip</title>
+    <style>
+        td{
+            text-align: center;
+        }
+        th{
+            text-align: left;
+        }
+        table{
+            margin-left: auto;
+            margin-right: auto;
+            margin-top: 45px;
+        }
+        h1{
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <script>
+        function hra() {
+            f1.t2.value=eval(f1.t1.value)*(25/100)
+        }
+        function da() {
+            f1.t3.value=eval(f1.t1.value)*(35/100)
+
+        }
+        function gpf() {
+            f1.t4.value=eval(f1.t1.value)*(15/100)
+
+        }
+        function net() {
+            f1.t5.value=(eval(f1.t1.value)+eval(f1.t2.value)+eval(f1.t3.value))-eval(f1.t4.value)
+
+        }
+    </script>
+    <h1>Payslip</h1>
+    <table>
+        <form action="" method="post" name="f1">
+            <tr>
+                <th>Employee Name:</th>
+                <th><input type="text"></th>
+            </tr>
+            <tr>
+                <th>Employee Code:</th>
+                <th><input type="text"></th>
+            </tr>
+            <tr>
+                <th>Post:</th>
+                <th><input type="text"></th>
+            </tr>
+            <tr>
+                <th>Basic Salary:</th>
+                <th><input type="tel" name="t1"></th>
+            </tr>
+            <tr>
+                <th>HRA:</th>
+                <th><input type="text" name="t2"></th>
+            </tr>
+            <tr>
+                <th>DA:</th>
+                <th><input type="text" name="t3"></th>
+            </tr>
+            <tr>
+                <th>GPF:</th>
+                <th><input type="text" name="t4"></th>
+            </tr>
+            <tr>
+                <th>Net Salary:</th>
+                <th><input type="text" name="t5"></th>
+            </tr>
+            <td colspan="2">
+                <input type="button" value="Submit" onclick="hra(); da(); gpf(); net();">
+            </td>
+        </form>
+    </table>
+</body>
+
+</html>

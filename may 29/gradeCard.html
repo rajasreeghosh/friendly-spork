@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grade Card</title>
+    <!-- DAA HW FOR 29-May
+    1.  Input 3subject marks
+    Calculate percentage
+    If marks>90
+    Grade A++
+    If marks in 80-89
+    Grade A
+    If marks in 70-79
+    Grade B
+    If marks in btw 60-69
+    Grade C
+    If marks<50
+    Grade D you are fail -->
+
+    
+
+    
+</head>
+
+<body>
+    <script type="text/javascript">
+        // document.write("Welcome to JavaScript")
+        // alert("How are you?")
+        var sub1, sub2, sub3, total, per
+        sub1 = parseInt(prompt("Enter the marks of 1st subject: "))
+        sub2 = parseInt(prompt("Enter the marks of 2nd subject: "))
+        sub3 = parseInt(prompt("Enter the marks of 3rd subject: "))
+        total = sub1 + sub2 + sub3
+        per = (total / 300) * 100
+        document.write("Your Total marks: " + total)
+        document.write("<br/>" + "Your percentage is " + per)
+        if (per > 90){
+            document.write("<br/>" +"Your Grade is A++")
+        }
+        else if(per < 89 && per >= 80){
+            document.write("<br/>" +"Your Grade is A")
+        }
+        else if(per < 79 && per >= 70){
+            document.write("<br/>" +"Your Grade is B")
+        }
+        else if(per < 69 && per >= 60){
+            document.write("<br/>" +"Your Grade is C")
+        }
+        else if(per <=50){
+            document.write("<br/>" +"Your Grade is D and you've failed")
+        }
+
+    </script>
+
+</body>
+
+</html>

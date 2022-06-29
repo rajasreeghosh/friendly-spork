@@ -1,0 +1,49 @@
+<html>
+<body>
+<script type="text/javascript">
+	function add()
+		{
+			f1.t3.value=eval(f1.t1.value)+eval(f1.t2.value);
+		}
+	function sub()
+		{
+			f1.t3.value=eval(f1.t1.value)-eval(f1.t2.value);
+		}
+	function multi()
+		{
+			f1.t3.value=eval(f1.t1.value)*eval(f1.t2.value);
+		}
+	function divide()
+		{
+			f1.t3.value=eval(f1.t1.value)/eval(f1.t2.value);
+		}
+</script>
+<form name="f1">
+	<table border="0">
+		<tr>
+			<th>Enter first number</th>
+			<th><input type="text" name="t1"></th>
+		</tr>
+		<tr>
+			<th>Enter second number</th>
+			<th><input type="text" name="t2"></th>
+		</tr>
+		<tr>
+			<th>Result</th>
+			<th><input type="text" name="t3"></th>
+		</tr>
+		<tr>
+			<td colspan="2">
+			<center>
+			<input type="button" value="add" onclick="add();">
+			<input type="button" value="substract" onclick="sub();">
+			<input type="button" value="multiply" onclick="multi();">
+			<input type="button" value="divide" onclick="divide();">
+			</center>
+			</td>
+		</tr>
+	</table>
+</form>
+
+</body>
+</html>

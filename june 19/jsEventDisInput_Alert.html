@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Choice in Text Box and Alert</title>
+</head>
+<body>
+    <div class="container">
+        <h2>Display Choice in Text Box and Alert</h2>
+        <form action="" method="post" name="f4">
+            <select name="selectedFood" id="selectedFood" onchange="document.f4.foods.value=document.f4.selectedFood.value">
+                <option value="Nothing">Select--</option>
+                <option value="Biriyani">Biriyani</option>
+                <option value="Egg Rolls">Egg Rolls</option>
+                <option value="Salad">Salad</option>
+                <option value="Momos">Momos</option>
+                <option value="Burger">Burger</option>
+            </select>
+            <label for="foods">Your order is</label>
+            <input type="text" id="foods" name="foods">
+        </form>
+        <button type="submit" id="btn" onsubmit="order()">Order</button>
+    </div>
+    <script>
+        function order()
+        {
+            alert("You have oredered "+f4.selectedFood[f4.selectedFood.selectedIndex].value)
+        }
+        // var value=document.getElementById("selectedFood");
+        // var getvalue=value.options[value.selectedIndex].value;
+        // var gettext=value.options[value.selectedIndex].text;
+        document.getElementById("btn").addEventListener("click", order)
+    </script>
+</body>
+</html>

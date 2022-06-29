@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Change background colour</title>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Change background colour with radio button</h2>
+        <!-- <button id="bttn">Button</button> -->
+        <form action="" method="post" name="f1">
+            <input type="radio" name="r1" onclick="bgChange()">Red
+            <input type="radio" name="r1" onclick="bgChange()">Violet
+            <input type="radio" name="r1" onclick="bgChange()">Yellow
+
+        </form>
+    </div>
+    <script>
+        function bgChange() {
+            if (f1.r1[0].checked) {
+                document.bgColor = "red";
+            }
+            if (f1.r1[1].checked) {
+                document.bgColor = "violet";
+            }
+            if (f1.r1[2].checked) {
+                document.bgColor = "yellow";
+            }
+        }
+    </script>
+</body>
+
+</html>

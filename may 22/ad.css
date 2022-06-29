@@ -1,0 +1,26 @@
+table{
+	margin-top: 10%;
+	table-layout: auto;
+ 	width: 70%
+ }
+ td{
+	 text-align: center;
+	 padding: 15px 5px 15px;
+ }
+ td:first-child {
+	 font-weight: bold;
+ }
+nav{
+	background-color: rgb(94, 77, 192);
+	padding: 10px;
+	text-align: center;
+	
+}
+nav a{
+	margin-top: 10px;
+	margin-bottom: 10px;
+	padding-left: 50px;
+	padding-right: 50px;
+	text-decoration: none;
+	color:white;
+}
